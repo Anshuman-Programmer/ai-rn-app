@@ -4,7 +4,7 @@ import { Image, Text, View } from "react-native";
 
 import { icons } from "../../constants";
 // import { Loader } from "../../components";
-// import { useGlobalContext } from "../../context/GlobalProvider";
+import { useGlobalContext } from "../../context/GlobalProvider";
 
 const TabIcon = ({
   icon,
@@ -36,15 +36,15 @@ const TabIcon = ({
 };
 
 const TabLayout = () => {
-  // const { loading, isLogged } = useGlobalContext();
+  const { loading, isLogged } = useGlobalContext();
 
-  // if (!loading && !isLogged) return <Redirect href="/sign-in" />;
+  if (!loading && !isLogged) return <Redirect href="/sign-in" />;
 
   return (
     <>
       <Tabs
         screenOptions={{
-          tabBarActiveTintColor: "#FFA001",
+          tabBarActiveTintColor: "#128cff",
           tabBarInactiveTintColor: "#CDCDE0",
           tabBarShowLabel: false,
           tabBarStyle: {
